@@ -41,9 +41,9 @@ eval "$(pyenv init -)"
 echo -e '\nif command -v pyenv 1>/dev/null 2>&1; then\n    eval "$(pyenv init -)"\nfi' >> ~/.bash_profile
 ```
 
-#### Ubuntu 20.04
+#### Ubuntu 20.04 or 22.04
 
-The following shows how to install the Python environment for SDK in Ubuntu 20.04.
+The following shows how to install the Python environment for SDK in Ubuntu 20.04 or 22.04.
 
 First, keep package list and their dependencies up to date.
 ```bash
@@ -86,7 +86,7 @@ Python 3.9.6
 The target runtime environment is Linux. Development has been mainly conducted under macOS environment. This section describes how to set up a development environment in macOS (Intel chip) and Ubuntu.
 
 The following tools and packages are needed as minimum:
-- go 1.18+
+- go 1.22+
 - golangci-lint
 
 After installing above packages, you could try a development setup called `fiab`, an acronym for flame-in-a-box, which is found [here](system/fiab.md).
@@ -101,9 +101,9 @@ Depending on Linux distributions, several package managers such as `apt`, `yum`,
 brew install go
 brew install golangci-lint
 ```
-### Ubuntu 20.04
+### Ubuntu 20.04 or 22.04
 
-The following shows how to install the above packages in Ubuntu 20.04.
+The following shows how to install the above packages in Ubuntu 20.04 or 22.04.
 
 First, keep package list and their dependencies up to date.
 ```bash
@@ -112,7 +112,7 @@ sudo apt update
 
 Install golang and and golangci-lint.
 ```bash
-golang_file=go1.18.6.linux-amd64.tar.gz
+golang_file=go1.22.3.linux-amd64.tar.gz
 curl -LO https://go.dev/dl/$golang_file && tar -C $HOME -xzf $golang_file
 echo "PATH=\"\$HOME/go/bin:\$PATH\"" >> $HOME/.bashrc
 source $HOME/.bashrc
